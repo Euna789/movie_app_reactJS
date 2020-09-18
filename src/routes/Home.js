@@ -11,7 +11,7 @@ class Home extends React.Component{
 
   getMovies = async () =>{
     //await: 비동기, 너는 이걸 기다려야해
-    const {data: {data: {movies}}} = await axios.get("https://yts.mx/api/v2/list_movies.json?sort_by=rating");
+    const {data: {data: {movies}}} = await axios.get("https://yts-proxy.now.sh/list_movies.json?sort_by=rating");
     this.setState({movies: movies, isLoading: false})
     //movies:from state , movies: 내가 fetch한것. javascript는 movies하나만 써도 알아먹음
   }
